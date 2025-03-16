@@ -1,0 +1,736 @@
+@font-face {
+  font-family: attila;
+  src: url(Fonts/attila.ttf);
+}
+
+/* https://saarthack.github.io/gettala/ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "attila";
+  color: #d1d1d1;
+}
+
+html,
+body {
+  background-color: #222;
+  position: relative;
+}
+
+/* body {
+  background-color: #222;
+  overflow-x: hidden;
+} */
+
+#main {
+  overflow: hidden;
+}
+#full-scr-nav {
+  position: fixed;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  background-color: #d1d1d1;
+  color: #222;
+  padding: 18vh 7vh;
+  z-index: 99;
+  transition: all ease 0.6s;
+  top: -100vh;
+}
+
+#close {
+  height: 30px;
+  width: 30px;
+  background-color: #222;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+#close i {
+  color: #adadad;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#full-scr-nav h1 {
+  font-size: 100px;
+  color: #222;
+}
+
+#opt {
+  height: 50vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vh;
+  flex-wrap: wrap;
+}
+#opt h4 {
+  color: #222;
+  font-size: 2vw;
+  margin-bottom: 2vh;
+  width: 8vw;
+  font-family: "montserrat";
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  position: fixed;
+  z-index: 9;
+  padding: 0 50px;
+  width: 100%;
+}
+
+#nav h2 {
+  text-transform: uppercase;
+  font-size: 25px;
+  letter-spacing: 3px;
+  z-index: 9;
+}
+
+#nav-part2 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 9;
+}
+
+#nav-part2 i {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+#page1 {
+  position: relative;
+  min-height: 85vh;
+  width: 100vw;
+}
+
+#page1 h1 {
+  position: absolute;
+  left: 5%;
+  font-size: 12vw;
+  top: 13vh;
+  letter-spacing: 17px;
+}
+
+#page1 h2 {
+  position: absolute;
+  top: 42vh;
+  width: 30%;
+  line-height: 4vw;
+  left: 20vw;
+  font-size: 3.1vw;
+}
+#page1 h3 {
+  position: absolute;
+  top: 47vh;
+  width: 15%;
+  right: 20vw;
+  font-size: 1.2vw;
+  letter-spacing: 2px;
+  line-height: 2vw;
+}
+
+#page2 img {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translate(-50%, 0) scale(0.85);
+}
+
+#page2 {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 25vh;
+}
+
+#h11 {
+  margin-top: 25vh;
+}
+
+#page2 h1 {
+  width: 63%;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 45px;
+  transform-origin: 100% 100%;
+  transform: rotateX(270deg);
+  opacity: 0;
+}
+
+#page2 h1 span {
+  font-family: dancing script;
+}
+
+#page3 {
+  position: relative;
+  height: 100vh;
+  padding: 10vh 6vw;
+}
+
+#page3 #line {
+  position: relative;
+  padding: 0;
+  height: 2px;
+  width: 10%;
+  background-color: #adadad;
+}
+
+#line h1 {
+  position: absolute;
+  top: -7vh;
+  left: 5%;
+  font-size: 17px;
+}
+
+.fruit {
+  display: flex;
+  align-items: flex-start;
+  margin: 4vh 0;
+  position: relative;
+  text-transform: uppercase;
+  cursor: pointer;
+  /* background-color: red; */
+}
+
+.fruit h5 {
+  font-size: 17px;
+  font-family: "havelock titling";
+}
+
+.fruit h1 {
+  font-size: 4vw;
+  color: #dadada;
+  margin-left: 12vw;
+  font-family: "havelock titling";
+  text-align: left;
+  position: relative;
+  z-index: 99;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  -webkit-text-stroke: 1px #dadada;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+.fruit h1:hover {
+  color: #222;
+}
+
+.fruit i {
+  position: absolute;
+  right: 0;
+  font-size: 4vw;
+  font-weight: 800;
+  opacity: 0;
+}
+
+.fruit:hover i {
+  opacity: 1;
+  transition: all cubic-bezier(0.39, 1, 0.32, 1) 3s;
+}
+
+#page3 .card {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  height: 45vh;
+  width: 17vw;
+  border-radius: 25px;
+  padding: 25px 20px;
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 5s;
+  opacity: 0;
+  z-index: 1;
+}
+
+.mangocard {
+  background-color: rgb(255, 208, 0);
+}
+.bananacard {
+  background-color: rgb(217, 237, 36);
+}
+.pinecard {
+  background-color: rgb(0, 255, 170);
+}
+.pithayacard {
+  background-color: rgb(255, 34, 119);
+}
+
+.card h2 {
+  color: #222;
+  font-size: 2vw;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  position: absolute;
+  color: #222;
+  font-size: 1.1vw;
+}
+
+#mango {
+  margin-top: 10vh;
+}
+
+#page4 {
+  height: 85vh;
+  width: 100%;
+  position: relative;
+  padding: 1rem 4rem;
+}
+
+#page4 h1 {
+  font-size: 7.5vw;
+}
+
+#page5 {
+  height: 130vh;
+  width: 100vw;
+  position: relative;
+}
+
+#page5-elems {
+  height: 22%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#page5-elems h1 {
+  width: 65%;
+  font-size: 3.2rem;
+  padding: 1.6rem 4rem;
+  border: 1px solid #d1d1d1;
+  height: 100%;
+}
+#page5-elems h2 {
+  width: 35%;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 3rem 4rem;
+  height: 100%;
+  border-top: 1px solid #d1d1d1;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+#page5-content {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 180px 0;
+  background-image: url(https://uploads-ssl.webflow.com/61defec4a021d8fe954c11bd/61defec4a021d83ede4c11f8_stars.gif);
+}
+
+#page5-content h1 {
+  font-size: 3.5rem;
+  width: 60%;
+  text-align: center;
+}
+
+#page5-content h1 span {
+  font-family: dancing script;
+  font-size: 4.2rem;
+}
+
+#page5-content h3 {
+  font-size: 0.9rem;
+  margin: 50px;
+}
+
+#page6 .slide1-of-h1,
+.slide2-of-h1 {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  cursor: default;
+}
+
+#page6 .slide2-of-h1 h1 {
+  transform: translateX(-100%);
+}
+
+#page6 h1 {
+  font-size: 10vw;
+  text-transform: uppercase;
+}
+
+#page6 h1 .one2 {
+  color: transparent;
+  -webkit-text-stroke: 1px #adadad;
+}
+
+#page6 .slide1-of-h1::-webkit-scrollbar {
+  display: none;
+}
+#page6 .slide2-of-h1::-webkit-scrollbar {
+  display: none;
+}
+
+#page7 {
+  height: 100vh;
+  width: 100vw;
+  background-color: #222;
+  padding: 100px 50px;
+  text-align: center;
+}
+
+#page7 h2 {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 3vw;
+  width: 40%;
+}
+
+#page7 h2 span {
+  font-family: dancing script;
+  font-size: 3.7rem;
+}
+
+#page7-elems {
+  position: relative;
+  margin-top: 3vh;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#page7-elems #element1 {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: none;
+}
+
+#page7-elems #element1 h1 {
+  font-size: 2.2rem;
+  position: relative;
+  z-index: 99;
+}
+
+#page7-elems #element2 {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: none;
+}
+
+#page7-elems #element2 h1 {
+  font-size: 2.2rem;
+  position: relative;
+  z-index: 99;
+}
+
+#page7-elems #element1 img {
+  position: absolute;
+  height: 180px;
+  opacity: 0;
+  transition: opacity ease-in 0.2s;
+  transform: rotate(15deg);
+}
+#page7-elems #element2 img {
+  position: absolute;
+  height: 180px;
+  opacity: 0;
+  transition: opacity ease-in 0.2s;
+  transform: rotate(15deg);
+}
+
+#page8 {
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+#page8 h1 {
+  position: absolute;
+  top: 20vh;
+  font-size: 4vw;
+}
+
+#product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+.product {
+  position: absolute;
+  height: 35vh;
+  top: 35vh;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
+}
+
+.product:hover {
+  transform: rotate(12deg) scale(1.2);
+}
+
+.product img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+#product1 {
+  height: 37vh;
+  top: 41vh;
+  left: 19vw;
+}
+
+#product2 {
+  height: 44vh;
+  top: 38vh;
+  left: 29vw;
+}
+
+#product3 {
+  height: 50vh;
+  left: 40vw;
+}
+
+#product4 {
+  height: 44vh;
+  top: 38vh;
+  left: 55vw;
+}
+
+#product5 {
+  height: 37vh;
+  top: 41vh;
+  left: 68vw;
+}
+
+@media (max-width: 768px) {
+  #nav {
+    height: 70px;
+    padding: 0 20px;
+  }
+
+  #page1 {
+    height: 70vh;
+  }
+  #page1 h1 {
+    left: 8%;
+    font-size: 17vw;
+    top: 20vh;
+    letter-spacing: 20px;
+  }
+
+  #page1 h2 {
+    width: 50%;
+    font-size: 5vw;
+    left: 10vw;
+    line-height: 1.2;
+  }
+
+  #page1 h3 {
+    top: 55vh;
+    width: 40%;
+    font-size: 3.5vw;
+    line-height: 1.3;
+    letter-spacing: 1px;
+  }
+
+  #page2 {
+    min-height: 65vh;
+    padding-bottom: 0;
+  }
+
+  #page2 img {
+    transform: translate(-50%, 0%) scale(0.75);
+  }
+
+  #h11 {
+    margin-top: 10vh;
+    font-size: 1.8rem;
+  }
+
+  #page3 .card {
+    height: 20vh;
+    width: 30vw;
+  }
+
+  .card h2 {
+    font-size: 5vw;
+    margin-bottom: 25px;
+  }
+
+  .card h3 {
+    font-size: 2.5vw;
+  }
+
+  .fruit {
+    margin: 10vh 0;
+  }
+
+  .fruit h1 {
+    font-size: 8vw;
+  }
+  .fruit i {
+    font-size: 8vw;
+  }
+
+  #page2 h1 {
+    width: 80%;
+    font-size: 1.4rem;
+    font-weight: 800;
+  }
+
+  #page4 {
+    height: 30vh;
+    position: relative;
+    padding: 3rem 3rem;
+  }
+
+  #page5 {
+    height: 120vh;
+  }
+
+  #page5-elems {
+    height: 15%;
+  }
+
+  #page5-elems h1 {
+    width: 55%;
+    font-size: 0.8rem;
+    line-height: 2;
+    padding: 1.5rem 1rem;
+  }
+  #page5-elems h2 {
+    width: 45%;
+    font-size: 0.6rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  #page5-content h1 {
+    font-size: 1.4rem;
+    width: 91%;
+  }
+
+  #page5-content h1 span {
+    font-size: 1.5rem;
+  }
+
+  #page5-content h3 {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 100px 10px;
+  }
+
+  #page6 h1 {
+    font-size: 13vw;
+  }
+
+  #page6 .slide1-of-h1,
+  .slide2-of-h1 {
+    line-height: 2;
+  }
+
+  #page7 {
+    height: 75vh;
+  }
+
+  #page7 h2 {
+    font-size: 6vw;
+    width: 98%;
+    line-height: 2;
+  }
+
+  #page7 h2 span {
+    font-size: 6vw;
+  }
+
+  #page7-elems {
+    height: 40vh;
+  }
+
+  #page7-elems #element1 {
+    width: 35%;
+  }
+
+  #page7-elems #element1 img {
+    height: 150px;
+  }
+
+  #page7-elems #element2 {
+    width: 35%;
+  }
+
+  #page7-elems #element1 img {
+    height: 150px;
+  }
+
+  #page8 {
+    height: 85vh;
+  }
+  #page8 h1 {
+    font-size: 9vw;
+    user-select: none;
+  }
+
+  #product1 {
+    height: 15vh;
+    left: 3vw;
+  }
+
+  #product2 {
+    height: 20vh;
+    left: 19vw;
+    z-index: 7;
+  }
+
+  #product3 {
+    height: 25vh;
+    left: 38vw;
+    z-index: 9;
+  }
+
+  #product4 {
+    height: 20vh;
+    left: 60vw;
+    z-index: 7;
+  }
+
+  #product5 {
+    height: 15vh;
+    left: 79vw;
+  }
+
+  #full-scr-nav {
+    z-index: 999;
+  }
+
+  #full-scr-nav h1 {
+    font-size: 65px;
+  }
+
+  #opt h4 {
+    font-size: 5vw;
+  }
+}
